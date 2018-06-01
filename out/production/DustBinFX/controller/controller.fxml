@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.canvas.Canvas?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.Controller"
+            prefHeight="600.0" prefWidth="600.0">
+
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text = "File">
+                    <MenuItem text="Save Level" onAction="#onLevelSave"/>
+                    <MenuItem text="Screenshot" onAction="#onScreenshot"/>
+                    <MenuItem text="Exit" onAction="#onExit"/>
+                </Menu>
+                <Menu text = "Tool">
+                    <MenuItem text="Sand"/>
+                    <MenuItem text="Metal"/>
+                    <MenuItem text="Water"/>
+                    <MenuItem text="Smoke"/>
+                    <MenuItem text="Dirt"/>
+                    <MenuItem text="Wood"/>
+                    <MenuItem text="Acid"/>
+                    <MenuItem text="Pink Virus"/>
+                    <MenuItem text="Purple Virus"/>
+                    <MenuItem text="Fire"/>
+                    <MenuItem text="Obsidian"/>
+                    <MenuItem text="Bomb"/>
+                    <MenuItem text="Explosion Fire"/>
+                </Menu>
+            </MenuBar>
+
+            <ToolBar>
+                <HBox alignment="CENTER" spacing="5">
+                    <TextField fx:id="brushSize" text="18" />
+                    <ColorPicker fx:id="colorPicker" />
+                    <CheckBox fx:id="eraser" text="Eraser" />
+                </HBox>
+            </ToolBar>
+        </VBox>
+    </top>
+
+    <center>
+        <Canvas fx:id="canvas" width="600" height="600" />
+    </center>
+
+</BorderPane>
